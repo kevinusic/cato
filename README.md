@@ -17,3 +17,11 @@ Requires Xcode 26 or later (macOS 26 / iOS 26 SDKs). App Attest auth only works 
 swift run KyotoTrip
 swift run KyotoItinerary
 ```
+
+## Claude API over HTTP
+
+[`KyotoPlannerAPI/`](KyotoPlannerAPI/README.md) is a separate package. It plans the same trip by calling the Claude API directly from Swift with `URLSession`, with structured output and a streamed follow-up. It doesn't need `ClaudeForFoundationModels` and runs on macOS, iOS and Linux:
+
+```sh
+cd KyotoPlannerAPI && ANTHROPIC_API_KEY=sk-ant-... swift run
+```
